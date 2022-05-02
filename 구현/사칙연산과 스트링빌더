@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+        int T = in.nextInt();
+		StringBuilder sb = new StringBuilder();
+		for(int tc=1; tc<=T; tc++) {
+			int A = in.nextInt();
+			int B = in.nextInt();
+
+			sb.append("Case #" + tc + ": " + (A + B) + "\n");
+		}
+
+		System.out.println(sb);
+
+	}
+
+}
+
+
+에서 내가 구하고자 하는 것은 A+B 인데
+만약 14 line에서 sb.append("Case #" + tc + ": " + A + B + "\n"); 로, 괄호가 없이 쓴다면 내가 원하고자 하는 결과값을 얻을 수 없다.
+그저 숫자를 이어 붙인게 된다.
+
+가령 A=1, B=1 일때 14 line에서 출력값은 2 이지만, 24 line 에서 출력값은 11이 된다. 
+근데 또 단독으로 sb.append(A+B); 로 쓰면 출력값은 2이다.
