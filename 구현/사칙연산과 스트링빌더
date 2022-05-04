@@ -12,6 +12,7 @@ public class Main {
 			int B = in.nextInt();
 
 			sb.append("Case #" + tc + ": " + (A + B) + "\n");
+			sb.append("Case #" + tc + ": " + A + " + " + B + " = "+(A + B) + "\n");
 		}
 
 		System.out.println(sb);
