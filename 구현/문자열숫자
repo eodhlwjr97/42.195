@@ -1,0 +1,31 @@
+/** 2588 */
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) throws Exception{
+		Scanner in = new Scanner(System.in);
+
+/** 몫과 나머지 이용하기 108ms 12828KB */
+		int A = in.nextInt();
+    int B = in.nextInt();
+
+    System.out.println(A * (B%10));
+    System.out.println(A * (B%100 - B%10)/10);
+    System.out.println(A * (B/100));
+    System.out.println(A * B);
+        
+/** split() 함수 써보기 112ms 12868KB */
+    // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    int x = in.nextInt();
+    String[] s1 = in.next().split("");
+        
+    int y = Integer.parseInt(s1[0])*100 + Integer.parseInt(s1[1])*10 + Integer.parseInt(s1[2]);
+        
+    System.out.println(x * Integer.parseInt(s1[2]));
+    System.out.println(x * Integer.parseInt(s1[1]));
+    System.out.println(x * Integer.parseInt(s1[0]));
+    System.out.println(x * y);        
+	}
+}
