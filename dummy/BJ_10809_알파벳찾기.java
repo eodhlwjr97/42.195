@@ -5,6 +5,7 @@ import java.util.*;
 
 public class BJ_10809_알파벳찾기 {
 	public static void main(String[] args) {
+		/** 내 풀이 */
 		Scanner in = new Scanner(System.in);
 		String s = in.nextLine();
 
@@ -34,18 +35,14 @@ public class BJ_10809_알파벳찾기 {
 		/** 다른사람 풀이 */
 		Scanner in = new Scanner(System.in);
  
- 
-		int[] arr = new int[26];
-		
+		int[] arr = new int[26];		
 		for(int i = 0; i < arr.length; i++) {
 			arr[i] = -1;
 		}
  
 		String S = in.nextLine();
- 
 		for(int i = 0; i < S.length(); i++) {
 			char ch = S.charAt(i);
-    
 			if(arr[ch - 'a'] == -1) {	// arr 원소 값이 -1 인 경우에만 초기화
 				arr[ch - 'a'] = i;
 			}
